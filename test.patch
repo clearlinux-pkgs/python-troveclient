@@ -1,0 +1,11 @@
+--- python-troveclient-1.0.9/test-requirements.txt~	2015-03-17 23:49:07.000000000 -0400
++++ python-troveclient-1.0.9/test-requirements.txt	2015-06-03 19:12:54.932791328 -0400
+@@ -1,7 +1,7 @@
+ # The order of packages is significant, because pip processes them in the order
+ # of appearance. Changing the order has an impact on the overall integration
+ # process, which may cause wedges in the gate later.
+-hacking>=0.8.0,<0.9
++hacking
+ coverage>=3.6
+ discover
+ oslosphinx>=2.2.0  # Apache-2.0
