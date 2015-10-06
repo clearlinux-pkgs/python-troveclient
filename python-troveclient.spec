@@ -4,7 +4,7 @@
 #
 Name     : python-troveclient
 Version  : 1.3.0
-Release  : 11
+Release  : 12
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-1.3.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-1.3.0.tar.gz
 Summary  : Client library for OpenStack DBaaS API
