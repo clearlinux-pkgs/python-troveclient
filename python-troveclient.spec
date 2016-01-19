@@ -4,7 +4,7 @@
 #
 Name     : python-troveclient
 Version  : 1.4.0
-Release  : 13
+Release  : 14
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-1.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-1.4.0.tar.gz
 Summary  : Client library for OpenStack DBaaS API
@@ -17,13 +17,13 @@ BuildRequires : Jinja2-python
 BuildRequires : Pygments-python
 BuildRequires : Sphinx-python
 BuildRequires : coverage-python
+BuildRequires : debtcollector-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
-BuildRequires : funcsigs-python
 BuildRequires : hacking-python
 BuildRequires : httplib2
 BuildRequires : iso8601-python
