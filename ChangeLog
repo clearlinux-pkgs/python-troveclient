@@ -1,9 +1,33 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Trival: Remove 'MANIFEST.in'
+* Use the oslo.utils.reflection to extract the class name
+* Change assertTrue(isinstance()) by optimal assert
+* Remove openstack-common.conf
+* Put py34 first in the env order of tox
+* Updated from global requirements
+* Drop py33 support
+* Replace assertEqual(None, *) with assertIsNone
+* Remove py26 support
+* Added '.' and remove extra parentheses(')') from README.rst
+* Trivial: Remove vim header from source files
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Add root-disable api
+* Add 'volume_type' parameter to instance create
+* Updated from global requirements
+* cluster create passing availability zone incorrectly
+* Delete python bytecode before every test run
+* Last sync from oslo-incubator
+* Updated from global requirements
+
 1.4.0
 -----
 
+* Fixes the backup-delete
 * Updated from global requirements
 * improve readme contents
 * Fix the function name with correct word
