@@ -1,6 +1,26 @@
 CHANGES
 =======
 
+2.1.1
+-----
+
+* Revert "Time to get rid of any last vestiges of slave_of"
+
+2.1.0
+-----
+
+* Add suport for module maintenance commands
+* Fix for guest_log authentication failure
+* Updated from global requirements
+* Update readme file to be valid rst and update content
+* support OS_ENDPOINT_TYPE environment variable
+* Updated from global requirements
+* Client Changes for Guest Log File Retrieval
+* Fix the "OpenStack CLI guide" link
+* Updated from global requirements
+* use oslotest to break into the debugger when running test cases
+* Remove argparse from requirements
+
 2.0.0
 -----
 
@@ -21,12 +41,14 @@ CHANGES
 * Updated from global requirements
 * cluster create passing availability zone incorrectly
 * Delete python bytecode before every test run
+* Time to get rid of any last vestiges of slave_of
 * Last sync from oslo-incubator
 * Updated from global requirements
 
 1.4.0
 -----
 
+* remove unnecessary message when running unit test
 * Fixes the backup-delete
 * Updated from global requirements
 * improve readme contents
