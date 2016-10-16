@@ -1,6 +1,69 @@
 CHANGES
 =======
 
+2.5.0
+-----
+
+* Implement scheduled backups
+* Expose Quota.update API
+* Add --incremental flag to backup-create
+* Add support for module ordering on apply
+
+2.4.0
+-----
+
+* Add command to delete BUILD instances and clusters
+* Implement Instance Upgrade
+* Display more flavor information in trove flavor-list command
+* module-update with --all_datastores doesn't work
+* Add vCPUs to flavor-list
+* Updated from global requirements
+* Replace assertDictEqual
+* Fix module-list failing with AccessInfoV2 error
+* Replace OpenStack LLC with OpenStack Foundation
+* Remove discover from test-requirements
+* Support flavor ids with leading '0'
+* Updated from global requirements
+
+2.3.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Add support for modules in cluster-grow
+* Locality support for clusters
+* Updated from global requirements
+* Make dict.keys() PY3 compatible
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix troveclient to support Mistral
+* Updated from global requirements
+* Fix CLI output of datastore-show
+* Update example usage
+* switch to keystoneauth
+* Persist error messages and display on 'show'
+* Updated from global requirements
+* Remove Rackspace auth references from troveclient
+* Update the home-page with developer documentation
+* Make username and password non-required params
+* Updated from global requirements
+* Locality support for replication
+* configuration-* cli allow name of configuration group entered
+* Display min/max correctly from config-param-list
+* Fixed output of cluster-create in CLI
+* Updated from global requirements
+* Updated from global requirements
+* Added check to prevent adding argument without help string
+* Add reno for release notes management
+* Allow use of backup name in trove create
+* Fix inadvertent generation of file during tox test
+* Remove times.dbm file for each tox run
+* Updated from global requirements
+* Graduate to oslo.i18n, cleanup incubator usage
+* Updated from global requirements
+* Update README.rst with lastest usage
+
 2.2.0
 -----
 
@@ -18,6 +81,7 @@ CHANGES
 * Fix for guest_log authentication failure
 * Updated from global requirements
 * Update readme file to be valid rst and update content
+* Use "# noqa" instead of "#flake8: noqa"
 * support OS_ENDPOINT_TYPE environment variable
 * Updated from global requirements
 * Client Changes for Guest Log File Retrieval
@@ -29,6 +93,7 @@ CHANGES
 2.0.0
 -----
 
+* Keep py3.X compatibility for urllib
 * Trival: Remove 'MANIFEST.in'
 * Use the oslo.utils.reflection to extract the class name
 * Change assertTrue(isinstance()) by optimal assert
