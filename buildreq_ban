@@ -1,2 +1,7 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+
+Crypto.Random-python
+mistralclient.api.client-python
+oslo_utils-python
+positional-python

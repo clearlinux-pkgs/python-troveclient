@@ -36,3 +36,4 @@ tox
 traceback2-python
 unittest2-python
 virtualenv
+oslo.utils
