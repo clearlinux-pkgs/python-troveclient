@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 2.5.0
-Release  : 26
+Release  : 27
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.5.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.5.0.tar.gz.asc
@@ -26,19 +26,16 @@ Requires: requests
 Requires: simplejson
 Requires: six
 BuildRequires : Babel-python
-BuildRequires : Jinja2
 BuildRequires : Sphinx-python
 BuildRequires : configparser-python
 BuildRequires : coverage-python
 BuildRequires : discover-python
-BuildRequires : enum34-python
 BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : futures-python
 BuildRequires : hacking
 BuildRequires : httplib2
 BuildRequires : keystoneauth1-python
-BuildRequires : markupsafe-python
 BuildRequires : msgpack-python-python
 BuildRequires : oslo.config
 BuildRequires : oslo.utils
@@ -95,7 +92,7 @@ python components for the python-troveclient package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487907741
+export SOURCE_DATE_EPOCH=1489036787
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -105,7 +102,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1487907741
+export SOURCE_DATE_EPOCH=1489036787
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
