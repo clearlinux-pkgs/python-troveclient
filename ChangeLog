@@ -1,6 +1,55 @@
 CHANGES
 =======
 
+2.8.0
+-----
+
+* Updated from global requirements
+* Add OpenStackClient plugin and flavor list
+* Add support for module-reapply command
+* Add module-instance-count command
+* Updated from global requirements
+* Time to get rid of slave_of
+* Fix module-list
+* Fix Swift Authentication for log commands
+
+2.7.0
+-----
+
+* Allow type to be specified on cluster-create
+* Updated from global requirements
+* Show team and repo badges on README
+* Use lowercase project name for doc
+* Get python-troveclient to use upper-constraints.txt
+* Multi-Region Support
+
+2.6.0
+-----
+
+* Updated from global requirements
+* move old apiclient code out of openstack/common
+* Cluster Upgrade
+* Added limit/marker support for config group lists
+* Updated from global requirements
+* Avoid use xx=[]  for parameter in function
+* Add i18n to v1/shell.py
+* Updated from global requirements
+* Updated from global requirements
+* Enable release notes translation
+* Replace assertTrue(a in b) with assertIn(a, b)
+* Using assertIsNotNone() instead of assertNotEqual(None)
+* Updated from global requirements
+* Throw correct error on creation of size 0
+* Avoid use xx=[]  for parameter initial value
+* Add tests to fake
+* Add a new command in the readme
+* Use i18n for shell.py
+* Delete unnessary as e
+* Add fixtures to test-requirements
+* Display flavor-ephemeral in trove flavor-list command
+* Update reno for stable/newton
+* Use strutils.to_slug() instead of utils.slugify()
+
 2.5.0
 -----
 
