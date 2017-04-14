@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+2.9.0
+-----
+
+* Updated from global requirements
+* update setup.cfg for classifier python 3.5
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Update reno for stable/ocata
+* Updated from global requirements
+
 2.8.0
 -----
 
@@ -18,6 +28,7 @@ CHANGES
 
 * Allow type to be specified on cluster-create
 * Updated from global requirements
+* Client changes for datastore-version volume-types
 * Show team and repo badges on README
 * Use lowercase project name for doc
 * Get python-troveclient to use upper-constraints.txt
