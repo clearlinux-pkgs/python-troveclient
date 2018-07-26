@@ -1,6 +1,26 @@
 CHANGES
 =======
 
+2.16.0
+------
+
+* Add configuration-default to OSC
+* Add detach-replica to OSC
+* Add execution-delete to OSC
+* Add promote-to-replica-source to OSC
+* Add log-list to OSC
+* Add eject-replica-source to OSC
+* Add configuration-instances to OSC
+* fix tox python3 overrides
+* Correctly mocking builtin open in test\_v1\_shell
+* Replace 'raise StopIteration' with 'return'
+* Add cluster-modules to OSC
+* Update the troveclient's README
+* Trivial: Update pypi url to new url
+* Follow the new PTI for document build
+* Migrate to Zuul v3 native job definitions
+* Change testenv from py34 to py35
+
 2.15.0
 ------
 

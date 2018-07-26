@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC36CDCB4DF00C68C (infra-root@openstack.org)
 #
 Name     : python-troveclient
-Version  : 2.15.0
-Release  : 31
-URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.15.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.15.0.tar.gz
-Source99 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.15.0.tar.gz.asc
+Version  : 2.16.0
+Release  : 32
+URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.16.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.16.0.tar.gz
+Source99 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.16.0.tar.gz.asc
 Summary  : Client library for OpenStack DBaaS API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -18,13 +18,17 @@ Requires: python-troveclient-python3
 Requires: python-troveclient-license
 Requires: python-troveclient-python
 Requires: Babel
+Requires: Sphinx
+Requires: httplib2
 Requires: keystoneauth1
+Requires: openstackdocstheme
 Requires: osc-lib
 Requires: oslo.i18n
 Requires: oslo.utils
 Requires: pbr
 Requires: python-mistralclient
 Requires: python-swiftclient
+Requires: reno
 Requires: requests
 Requires: simplejson
 Requires: six
@@ -78,14 +82,14 @@ python3 components for the python-troveclient package.
 
 
 %prep
-%setup -q -n python-troveclient-2.15.0
+%setup -q -n python-troveclient-2.16.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532382311
+export SOURCE_DATE_EPOCH=1532621870
 python3 setup.py build -b py3
 
 %check
