@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 2.17.0
-Release  : 35
+Release  : 36
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.17.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.17.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.17.0.tar.gz.asc
@@ -18,30 +18,47 @@ Requires: python-troveclient-license = %{version}-%{release}
 Requires: python-troveclient-python = %{version}-%{release}
 Requires: python-troveclient-python3 = %{version}-%{release}
 Requires: Babel
-Requires: Sphinx
-Requires: httplib2
 Requires: keystoneauth1
-Requires: openstackdocstheme
 Requires: osc-lib
 Requires: oslo.i18n
 Requires: oslo.utils
 Requires: pbr
 Requires: python-mistralclient
 Requires: python-swiftclient
-Requires: reno
 Requires: requests
 Requires: simplejson
 Requires: six
-Requires: sphinxcontrib-apidoc
+BuildRequires : Babel-python
 BuildRequires : buildreq-distutils3
+BuildRequires : cliff-python
+BuildRequires : debtcollector-python
+BuildRequires : decorator-python
+BuildRequires : dogpile.cache-python
+BuildRequires : iso8601-python
+BuildRequires : jmespath-python
+BuildRequires : keystoneauth1-python
+BuildRequires : netaddr
+BuildRequires : netifaces-python
+BuildRequires : openstacksdk-python
+BuildRequires : os-service-types-python
+BuildRequires : osc-lib-python
+BuildRequires : oslo.i18n-python
+BuildRequires : oslo.serialization-python
+BuildRequires : oslo.utils-python
 BuildRequires : pbr
 BuildRequires : pluggy
+BuildRequires : prettytable
 BuildRequires : py-python
 BuildRequires : pytest
+BuildRequires : python-mistralclient-python
+BuildRequires : python-swiftclient-python
+BuildRequires : simplejson
+BuildRequires : stevedore
 BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
+Python bindings to the OpenStack Trove API
 ==========================================
 
 %package bin
@@ -87,7 +104,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541273195
+export SOURCE_DATE_EPOCH=1551036532
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %check
