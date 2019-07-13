@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 2.18.0
-Release  : 38
+Release  : 39
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.18.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.18.0.tar.gz.asc
