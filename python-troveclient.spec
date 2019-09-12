@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : python-troveclient
-Version  : 2.19.0
-Release  : 40
-URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.19.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.19.0.tar.gz
-Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-2.19.0.tar.gz.asc
+Version  : 3.0.0
+Release  : 41
+URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz
+Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz.asc
 Summary  : Client library for OpenStack DBaaS API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -102,14 +102,14 @@ python3 components for the python-troveclient package.
 
 
 %prep
-%setup -q -n python-troveclient-2.19.0
+%setup -q -n python-troveclient-3.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567438397
+export SOURCE_DATE_EPOCH=1568321834
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
