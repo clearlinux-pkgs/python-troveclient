@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : python-troveclient
-Version  : 3.0.0
-Release  : 42
-URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz
-Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.0.0.tar.gz.asc
+Version  : 3.1.0
+Release  : 43
+URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
+Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz.asc
 Summary  : Client library for OpenStack DBaaS API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -59,6 +59,7 @@ BuildRequires : six
 BuildRequires : stestr
 BuildRequires : stestr-python
 BuildRequires : tox
+BuildRequires : util-linux
 BuildRequires : virtualenv
 BuildRequires : warlock-python
 
@@ -102,14 +103,14 @@ python3 components for the python-troveclient package.
 
 
 %prep
-%setup -q -n python-troveclient-3.0.0
+%setup -q -n python-troveclient-3.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568321834
+export SOURCE_DATE_EPOCH=1572288335
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -131,7 +132,7 @@ PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test ||
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-troveclient
-cp LICENSE %{buildroot}/usr/share/package-licenses/python-troveclient/LICENSE
+cp %{_builddir}/python-troveclient-3.1.0/LICENSE %{buildroot}/usr/share/package-licenses/python-troveclient/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -146,7 +147,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/python-troveclient/LICENSE
+/usr/share/package-licenses/python-troveclient/294b43b2cec9919063be1a3b49e8722648424779
 
 %files python
 %defattr(-,root,root,-)
