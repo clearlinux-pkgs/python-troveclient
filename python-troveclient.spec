@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 3.1.0
-Release  : 43
+Release  : 44
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
 Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz.asc
