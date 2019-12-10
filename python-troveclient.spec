@@ -6,10 +6,10 @@
 #
 Name     : python-troveclient
 Version  : 3.1.0
-Release  : 44
+Release  : 45
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz
-Source1 : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz.asc
+Source1  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.1.0.tar.gz.asc
 Summary  : Client library for OpenStack DBaaS API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -29,16 +29,32 @@ Requires: requests
 Requires: simplejson
 Requires: six
 BuildRequires : Babel
+BuildRequires : Babel-python
 BuildRequires : buildreq-distutils3
+BuildRequires : cliff-python
 BuildRequires : coverage-python
+BuildRequires : debtcollector-python
+BuildRequires : decorator-python
+BuildRequires : dogpile.cache-python
 BuildRequires : hacking
 BuildRequires : httplib2
+BuildRequires : iso8601-python
+BuildRequires : jmespath-python
 BuildRequires : jsonschema
 BuildRequires : jsonschema-python
 BuildRequires : keystoneauth1
+BuildRequires : keystoneauth1-python
+BuildRequires : netaddr
+BuildRequires : netifaces-python
+BuildRequires : openstacksdk-python
+BuildRequires : os-service-types-python
 BuildRequires : osc-lib
+BuildRequires : osc-lib-python
 BuildRequires : oslo.i18n
+BuildRequires : oslo.i18n-python
+BuildRequires : oslo.serialization-python
 BuildRequires : oslo.utils
+BuildRequires : oslo.utils-python
 BuildRequires : oslotest
 BuildRequires : oslotest-python
 BuildRequires : pbr
@@ -49,22 +65,24 @@ BuildRequires : pytest
 BuildRequires : python-cinderclient-python
 BuildRequires : python-glanceclient-python
 BuildRequires : python-mistralclient
+BuildRequires : python-mistralclient-python
 BuildRequires : python-novaclient-python
 BuildRequires : python-openstackclient-python
 BuildRequires : python-swiftclient
+BuildRequires : python-swiftclient-python
 BuildRequires : requests
 BuildRequires : requests-mock-python
 BuildRequires : simplejson
 BuildRequires : six
 BuildRequires : stestr
 BuildRequires : stestr-python
+BuildRequires : stevedore
 BuildRequires : tox
 BuildRequires : util-linux
 BuildRequires : virtualenv
 BuildRequires : warlock-python
 
 %description
-Python bindings to the OpenStack Trove API
 ==========================================
 
 %package bin
@@ -104,14 +122,14 @@ python3 components for the python-troveclient package.
 
 %prep
 %setup -q -n python-troveclient-3.1.0
+cd %{_builddir}/python-troveclient-3.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572288335
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1576014781
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -127,7 +145,7 @@ python3 setup.py build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test || :
+PYTHONPATH=%{buildroot}$(python -c "import sys; print(sys.path[-1])") python setup.py test || :
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
