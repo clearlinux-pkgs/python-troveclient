@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 3.2.0
-Release  : 48
+Release  : 49
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.2.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.2.0.tar.gz
 Source1  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.2.0.tar.gz.asc
@@ -83,47 +83,7 @@ BuildRequires : virtualenv
 BuildRequires : warlock-python
 
 %description
-Python bindings to the OpenStack Trove API
 ==========================================
-
-.. image:: https://governance.openstack.org/tc/badges/python-troveclient.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
-
-.. image:: https://img.shields.io/pypi/v/python-troveclient.svg
-    :target: https://pypi.org/project/python-troveclient/
-    :alt: Latest Version
-
-This is a client for the OpenStack Trove API. There's a Python API (the
-``troveclient`` module), and a command-line script (``trove``). Each
-implements 100% of the OpenStack Trove API.
-
-See the `Trove CLI Guide`_ for information on how to use the ``trove``
-command-line tool. You may also want to look at the
-`OpenStack API documentation`_.
-
-.. _Trove CLI Guide: https://docs.openstack.org/trove/latest/cli
-.. _OpenStack API documentation: https://docs.openstack.org/api-quick-start/
-
-python-troveclient is licensed under the Apache License like the rest of OpenStack.
-
-* License: Apache License, Version 2.0
-* `Online Documentation`_
-* `Bugs`_ - issue tracking
-* `PyPi`_- package installation
-* `Blueprints`_ - feature specifications
-* `Git Source`_
-* `Specs`_
-* `How to Contribute`_
-* `Release Notes`_
-
-.. _Online Documentation: https://docs.openstack.org/python-troveclient/latest
-.. _Bugs: https://storyboard.openstack.org/#!/project/openstack/python-troveclient
-.. _PyPi: https://pypi.org/project/python-troveclient
-.. _Blueprints: https://storyboard.openstack.org/#!/project/openstack/python-troveclient
-.. _Git Source: https://opendev.org/openstack/python-troveclient/
-.. _Specs: https://specs.openstack.org/openstack/trove-specs/
-.. _How to Contribute: https://docs.openstack.org/infra/manual/developers.html
-.. _Release Notes: https://docs.openstack.org/releasenotes/python-troveclient
 
 %package bin
 Summary: bin components for the python-troveclient package.
@@ -155,7 +115,19 @@ python components for the python-troveclient package.
 Summary: python3 components for the python-troveclient package.
 Group: Default
 Requires: python3-core
-Provides: pypi(python-troveclient)
+Provides: pypi(python_troveclient)
+Requires: pypi(babel)
+Requires: pypi(keystoneauth1)
+Requires: pypi(osc_lib)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(prettytable)
+Requires: pypi(python_mistralclient)
+Requires: pypi(python_swiftclient)
+Requires: pypi(requests)
+Requires: pypi(simplejson)
+Requires: pypi(six)
 
 %description python3
 python3 components for the python-troveclient package.
@@ -170,8 +142,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583215532
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583542582
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
