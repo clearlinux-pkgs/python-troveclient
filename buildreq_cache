@@ -1,12 +1,10 @@
-3.3.0
+3.3.1
 coverage-python
 hacking
 httplib2
 oslotest
 oslotest-python
 python-openstackclient-python
-python-subunit
-python-subunit-python
 requests-mock-python
 stestr
 stestr-python

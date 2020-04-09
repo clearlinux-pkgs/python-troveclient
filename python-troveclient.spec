@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : python-troveclient
-Version  : 3.3.0
-Release  : 50
-URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.0.tar.gz
-Source1  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.0.tar.gz.asc
+Version  : 3.3.1
+Release  : 51
+URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.1.tar.gz
+Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.1.tar.gz
+Source1  : http://tarballs.openstack.org/python-troveclient/python-troveclient-3.3.1.tar.gz.asc
 Summary  : Client library for OpenStack DBaaS API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -45,8 +45,6 @@ BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : python-mistralclient
 BuildRequires : python-openstackclient-python
-BuildRequires : python-subunit
-BuildRequires : python-subunit-python
 BuildRequires : python-swiftclient
 BuildRequires : requests
 BuildRequires : requests-mock-python
@@ -93,33 +91,33 @@ Summary: python3 components for the python-troveclient package.
 Group: Default
 Requires: python3-core
 Provides: pypi(python_troveclient)
-Requires: pypi(oslo.i18n)
-Requires: pypi(pbr)
-Requires: pypi(simplejson)
-Requires: pypi(babel)
-Requires: pypi(keystoneauth1)
-Requires: pypi(osc_lib)
-Requires: pypi(requests)
-Requires: pypi(python_swiftclient)
 Requires: pypi(prettytable)
-Requires: pypi(oslo.utils)
 Requires: pypi(python_mistralclient)
 Requires: pypi(six)
+Requires: pypi(requests)
+Requires: pypi(simplejson)
+Requires: pypi(keystoneauth1)
+Requires: pypi(python_swiftclient)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.utils)
+Requires: pypi(babel)
+Requires: pypi(pbr)
+Requires: pypi(osc_lib)
 
 %description python3
 python3 components for the python-troveclient package.
 
 
 %prep
-%setup -q -n python-troveclient-3.3.0
-cd %{_builddir}/python-troveclient-3.3.0
+%setup -q -n python-troveclient-3.3.1
+cd %{_builddir}/python-troveclient-3.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585322923
+export SOURCE_DATE_EPOCH=1586448120
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -141,7 +139,7 @@ PYTHONPATH=%{buildroot}$(python -c "import sys; print(sys.path[-1])") python set
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-troveclient
-cp %{_builddir}/python-troveclient-3.3.0/LICENSE %{buildroot}/usr/share/package-licenses/python-troveclient/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/python-troveclient-3.3.1/LICENSE %{buildroot}/usr/share/package-licenses/python-troveclient/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
