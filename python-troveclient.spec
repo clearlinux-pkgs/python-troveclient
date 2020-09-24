@@ -6,7 +6,7 @@
 #
 Name     : python-troveclient
 Version  : 5.1.1
-Release  : 56
+Release  : 57
 URL      : http://tarballs.openstack.org/python-troveclient/python-troveclient-5.1.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-troveclient/python-troveclient-5.1.1.tar.gz
 Source1  : http://tarballs.openstack.org/python-troveclient/python-troveclient-5.1.1.tar.gz.asc
